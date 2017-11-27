@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>KWEB board</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+<div class="container">
+    <h1 style="text-align: center;">KWEB board</h1>
+    <br>
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">제목</th>
+            <th scope="col">작성자</th>
+        </tr>
+        </thead>
+        <tbody>
+        <% for(var i=0;i<rows.length;i++) {%>
+        <tr>
+            <th scope="row"><%=i+1%></th>
+            <td><a href="/board/view/<%=rows[i].id%>"><%=rows[i].title%></a></td>
+            <td><%=rows[i].author%></td>
+        </tr>
+        <% } %>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
